@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-cockpit',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent implements OnInit {
+  serverCreated = new EventEmitter();
   newServerName = '';
   newServerContent = '';
   constructor() { }

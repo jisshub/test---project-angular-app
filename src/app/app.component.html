@@ -1,5 +1,8 @@
 <div class="container">
-  <app-cockpit></app-cockpit>
+  <app-cockpit 
+  (serverCreated)=" OnServerAdded($event)"
+  (bluePrintCreated)="OnBluePrintAdded($event)">
+  </app-cockpit>
   <hr>
   <div class="row">
     <div class="col-lg-12">
