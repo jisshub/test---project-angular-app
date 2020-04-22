@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent implements OnInit {
-  // attach a input decorator to the element property-
+  // attach a buit in input decorator to the element property-
   // will make it vaiable outside this component
   
   // <!-- so any component accessing the element property will be 
