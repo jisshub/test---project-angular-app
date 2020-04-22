@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-server',
@@ -6,6 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent implements OnInit {
+  // attach a input decorator to the element property-
+  // will make it vaiable outside this component
+  
+  // <!-- so any component accessing the element property will be 
+  // able to use the element property of ServerComponent class-->
+  @Input()
   element: {type:string, name:string, content:string};
   constructor() { }
 

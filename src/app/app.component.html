@@ -6,8 +6,8 @@
       <div
         class="card card-body mb-2"
         *ngFor="let serverElement of serverElements">
-        <!-- bind element property of server.component.ts and store
-        each server element object -->
+        <!-- v bind serverElement object to the element property -->
+        <!-- here each serverElement is an object -->
           <app-server [element]="serverElement"></app-server>
       </div>
     </div>
