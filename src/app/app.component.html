@@ -1,7 +1,7 @@
 <div class="container">
   <app-cockpit 
-  (serverCreated)=" OnServerAdded($event)"
-  (bluePrintCreated)="OnBluePrintAdded($event)">
+  (serverCreated)="OnServerAdded($event)"
+  (bpCreated)="OnBluePrintAdded($event)">
   </app-cockpit>
   <hr>
   <div class="row">
@@ -11,7 +11,7 @@
         *ngFor="let serverElement of serverElements">
         <!-- v bind serverElement object to the element property -->
         <!-- here each serverElement is an object -->
-          <app-server [element]="serverElement"></app-server>
+          <app-server [myElement]="serverElement"></app-server>
       </div>
     </div>
   </div>
