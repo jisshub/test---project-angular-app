@@ -8,8 +8,9 @@
     <!-- use local reference  instead of two way data binding-->
     <input type="text" class="form-control" #bluePrint>
     <br>
+    <input type="date" class="form-control" name="date" id="date" #serverDate>
     <!-- pass that local reference variables as arguments to function call -->
-    <button class="btn btn-primary mr-3"(click)="onAddServer(serverName, bluePrint)">Add Server</button>
-    <button class="btn btn-primary" (click)="onAddBlueprint(serverName, bluePrint)">Add Server Blueprint</button>
+    <button class="btn btn-primary mr-3 mt-3"(click)="onAddServer(serverName, bluePrint, serverDate)">Add Server</button>
+    <button class="btn btn-primary mt-3" (click)="onAddBlueprint(serverName, bluePrint, serverDate)">Add Server Blueprint</button>
   </div>  
 </div>

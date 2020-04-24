@@ -15,7 +15,7 @@ export class ServerComponent implements OnInit {
 
   // we can even alias to our element property
   // and use that alias in appcomponent.
-  @Input('myElement') element: {type:string, name:string, content:string};
+  @Input('myElement') element: {type:string, name:string, content:string, date: string};
   constructor() { }
 
   ngOnInit(): void {

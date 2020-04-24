@@ -2,6 +2,12 @@
 <div class="card-text">
   <p>
     <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
+    <br>
+    <strong *ngIf="element.type === 'server'" style="color: red">{{ element.date }}</strong>
+
     <em *ngIf="element.type === 'blueprint'" style="color: blue">{{ element.content }}</em>
+    <br>
+    <em *ngIf="element.type === 'blueprint'" style="color: blue">{{ element.date }}</em>
+
   </p>
 </div>
