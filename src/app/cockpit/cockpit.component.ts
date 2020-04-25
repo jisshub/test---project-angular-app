@@ -8,6 +8,7 @@ import { EventEmitter } from '@angular/core'
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent implements OnInit {
+
   // create twoo properties which are marked as event emitters
  // use @Ouput() before each event emitter, since v r outputting this events to our app component.
   @Output() serverCreated = new EventEmitter<{serverName: string, serverContent: string, serverDate: string}>();
@@ -25,6 +26,7 @@ export class CockpitComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log("ngOnit called")
   }
   // get the lcal reference arguments to parameters of type HTMLInputElmeent
   onAddServer(getsServerName: HTMLInputElement, getBluePrint:HTMLInputElement) {

@@ -2,6 +2,9 @@
   <app-cockpit 
   (serverCreated)="OnServerAdded($event)"
   (bpCreated)="OnBluePrintAdded($event)">
+  <div class="col-lg-12">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptatem quae a quaerat distinctio quia est fuga eaque eveniet asperiores!</p>
+  </div>
   </app-cockpit>
   <hr>
   <div class="row">
@@ -11,7 +14,17 @@
         *ngFor="let serverElement of serverElements">
         <!-- v bind serverElement object to the element property -->
         <!-- here each serverElement is an object -->
-          <app-server [myElement]="serverElement"></app-server>
+          <app-server [myElement]="serverElement">
+            <p>
+              <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.content }}</strong>
+              <br>
+              <strong *ngIf="serverElement.type === 'server'" style="color: red">{{ serverElement.date }}</strong>
+          
+              <em *ngIf="serverElement.type === 'blueprint'" style="color: blue">{{ serverElement.content }}</em>
+              <br>
+              <em *ngIf="serverElement.type === 'blueprint'" style="color: blue">{{ serverElement.date }}</em>
+            </p>
+          </app-server>
       </div>
     </div>
   </div>

@@ -12,5 +12,8 @@
     <!-- pass that local reference variables as arguments to function call -->
     <button class="btn btn-primary mr-3 mt-3"(click)="onAddServer(serverName, bluePrint, serverDate)">Add Server</button>
     <button class="btn btn-primary mt-3" (click)="onAddBlueprint(serverName, bluePrint, serverDate)">Add Server Blueprint</button>
+
   </div>  
+  <!-- here v project the contents of app component plasced in b/w app-cockpit tag -->
+  <ng-content></ng-content>
 </div>
